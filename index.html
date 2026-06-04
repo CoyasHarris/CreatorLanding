@@ -3,9 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Creators — Εκεί που οι δημιουργοί βρίσκουν τους δικούς τους</title>
+<title>Creator — Εκεί που οι δημιουργοί βρίσκουν τους δικούς τους</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&family=LXGW+WenKai+TC&display=swap" rel="stylesheet">
+<!-- font candidates (uncomment to test):
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oi&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+-->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 <style>
   :root {
@@ -19,8 +24,9 @@
     --muted: #888;
     --border: #242424;
     --radius: 16px;
-    --font-display: 'Syne', sans-serif;
-    --font-body: 'DM Sans', sans-serif;
+    --font-display: 'LXGW WenKai TC', serif;
+    /* candidates: 'Comfortaa', 'Oi', 'Shrikhand' */
+    --font-body: 'Barlow', sans-serif;
   }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
@@ -64,7 +70,7 @@
   .hero-tag { display: inline-flex; align-items: center; gap: 8px; background: var(--bg3); border: 1px solid var(--border); border-radius: 50px; padding: 6px 18px; font-size: 13px; color: var(--muted); margin-bottom: 32px; position: relative; z-index: 1; }
   .hero-tag .dot { width: 7px; height: 7px; background: var(--accent); border-radius: 50%; animation: pulse 2s infinite; }
   @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: .5; transform: scale(.8); } }
-  .hero h1 { font-family: var(--font-display); font-size: clamp(40px, 7vw, 74px); font-weight: 800; color: #fff; line-height: 1.12; letter-spacing: -2px; margin-bottom: 24px; position: relative; z-index: 1; max-width: 860px; }
+  .hero h1 { font-family: var(--font-display); font-size: clamp(56px, 9vw, 100px); font-weight: 700; color: #fff; line-height: 1.02; letter-spacing: -2px; margin-bottom: 24px; position: relative; z-index: 1; max-width: 960px; }
   .hero h1 em { font-style: normal; color: var(--accent); }
   .hero > p { font-size: 18px; color: var(--muted); max-width: 540px; margin: 0 auto 40px; position: relative; z-index: 1; font-weight: 300; }
   .hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1; margin-bottom: 60px; }
@@ -77,7 +83,7 @@
   section { padding: 100px 48px; }
   .container { max-width: 960px; margin: 0 auto; }
   .section-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; }
-  .section-title { font-family: var(--font-display); font-size: clamp(28px, 4vw, 44px); font-weight: 800; color: #fff; line-height: 1.15; letter-spacing: -1px; margin-bottom: 16px; }
+  .section-title { font-family: var(--font-display); font-size: clamp(36px, 5.5vw, 62px); font-weight: 700; color: #fff; line-height: 1.08; letter-spacing: -1px; margin-bottom: 16px; }
   .section-sub { font-size: 17px; color: var(--muted); max-width: 580px; font-weight: 300; line-height: 1.75; }
   .divider { border: none; border-top: 1px solid var(--border); }
 
@@ -89,7 +95,7 @@
   .feature-card:hover::before { transform: scaleX(1); }
   .feature-icon { width: 48px; height: 48px; background: var(--accent-dim); border: 1px solid var(--accent-border); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
   .feature-icon svg { width: 22px; height: 22px; stroke: var(--accent); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-  .feature-card h3 { font-family: var(--font-display); font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 10px; }
+  .feature-card h3 { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: #fff; margin-bottom: 10px; letter-spacing: -0.5px; }
   .feature-card p { font-size: 14px; color: var(--muted); line-height: 1.65; }
 
   /* WHO / SWIPER */
@@ -98,7 +104,7 @@
   .swiper-slide { height: auto; }
   .who-card { background: var(--bg3); border: 1px solid var(--border); border-radius: 20px; padding: 40px 36px; height: 100%; }
   .who-badge { display: inline-block; background: var(--accent-dim); color: var(--accent); border: 1px solid var(--accent-border); border-radius: 50px; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 5px 14px; margin-bottom: 20px; }
-  .who-card h3 { font-family: var(--font-display); font-size: 26px; font-weight: 800; color: #fff; margin-bottom: 12px; letter-spacing: -.5px; }
+  .who-card h3 { font-family: var(--font-display); font-size: 30px; font-weight: 700; color: #fff; margin-bottom: 12px; letter-spacing: -0.5px; }
   .who-card .desc { font-size: 15px; color: var(--muted); font-weight: 300; margin-bottom: 24px; line-height: 1.7; }
   .who-tags { display: flex; flex-wrap: wrap; gap: 8px; }
   .who-tag { background: #242424; border: 1px solid var(--border); border-radius: 50px; font-size: 13px; color: #aaa; padding: 6px 14px; }
@@ -109,8 +115,8 @@
   .steps { margin-top: 56px; }
   .step { display: flex; gap: 28px; padding: 32px 0; border-bottom: 1px solid var(--border); align-items: flex-start; }
   .step:last-child { border-bottom: none; }
-  .step-num { flex-shrink: 0; width: 44px; height: 44px; background: var(--accent-dim); border: 1.5px solid var(--accent-border); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 16px; font-weight: 800; color: var(--accent); margin-top: 4px; }
-  .step-body h3 { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+  .step-num { flex-shrink: 0; width: 44px; height: 44px; background: var(--accent-dim); border: 1.5px solid var(--accent-border); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 20px; font-weight: 400; color: var(--accent); margin-top: 4px; letter-spacing: 1px; }
+  .step-body h3 { font-family: var(--font-display); font-size: 24px; font-weight: 700; color: #fff; margin-bottom: 8px; letter-spacing: -0.5px; }
   .step-body p { font-size: 15px; color: var(--muted); font-weight: 300; line-height: 1.7; }
 
   /* PRICING */
@@ -118,8 +124,8 @@
   .pricing-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 20px; padding: 40px 36px; }
   .pricing-card.featured { border: 2px solid var(--accent); position: relative; }
   .featured-badge { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--accent); color: #111; font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; padding: 5px 18px; border-radius: 50px; white-space: nowrap; }
-  .plan-name { font-family: var(--font-display); font-size: 14px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
-  .plan-price { font-family: var(--font-display); font-size: 52px; font-weight: 800; color: #fff; line-height: 1; letter-spacing: -2px; margin-bottom: 6px; }
+  .plan-name { font-family: var(--font-display); font-size: 16px; font-weight: 400; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+  .plan-price { font-family: var(--font-display); font-size: 60px; font-weight: 400; color: #fff; line-height: 1; letter-spacing: 2px; margin-bottom: 6px; }
   .plan-price.muted { color: #333; }
   .plan-price span { font-size: 18px; font-weight: 400; color: var(--muted); letter-spacing: 0; }
   .plan-desc { font-size: 14px; color: var(--muted); margin-bottom: 28px; font-weight: 300; }
@@ -177,7 +183,7 @@
       <button class="lang-btn" onclick="setLang('en')">EN</button>
       <button class="lang-btn" onclick="setLang('el')">ΕΛ</button>
     </div>
-    <a href="https://YOUR_APP_URL" class="btn btn-app" target="_blank" data-i18n="nav.openApp"></a>
+    <a href="https://creator-app.gr" class="btn btn-app" target="_blank" data-i18n="nav.openApp"></a>
     <a href="#join" class="btn btn-primary" data-i18n="nav.join"></a>
   </div>
 </nav>
@@ -189,9 +195,9 @@
   <h1 data-i18n-html="hero.h1"></h1>
   <p data-i18n="hero.p"></p>
   <div class="hero-btns">
-    <a href="https://YOUR_APP_URL" class="btn btn-app" target="_blank" data-i18n="hero.btnApp"></a>
-    <a href="#join" class="btn btn-primary" data-i18n="hero.btnJoin"></a>
-    <a href="#features" class="btn btn-ghost" data-i18n="hero.btnExplore"></a>
+    <a href="https://creator-app.gr" class="btn btn-app" target="_blank" data-i18n="hero.btnApp"></a>
+    <a href="https://creator-app.gr" class="btn btn-primary" data-i18n="hero.btnJoin"></a>
+    <a href="https://creator-app.gr" class="btn btn-ghost" data-i18n="hero.btnExplore"></a>
   </div>
   <div class="hero-pills">
     <div class="hero-pill"><strong>🎭 Film &amp; Theatre</strong></div>
@@ -364,7 +370,7 @@
   <p class="footer-copy" data-i18n="footer.copy"></p>
 </footer>
 
-<a href="https://YOUR_APP_URL" class="floating-btn" target="_blank">
+<a href="https://creator-app.gr" class="floating-btn" target="_blank">
   <span data-i18n="nav.openApp"></span>
   <div class="dot-arrow">↗</div>
 </a>
@@ -383,7 +389,7 @@ const T = {
     'hero.btnApp':'Open the app ↗','hero.btnJoin':'Create your free profile','hero.btnExplore':'Explore features',
     'hero.pill2':'Photography','hero.pill3':'Visual Arts','hero.pill4':'Direction','hero.pill5':'Writing',
     'features.eyebrow':'The platform','features.title':'Not just another social network',
-    'features.sub':"Creators is designed from the ground up for creative professionals — people whose work doesn't fit into a standard profile. A space to be seen, to connect, and to grow your craft.",
+    'features.sub':"Creator is designed from the ground up for creative professionals — people whose work doesn't fit into a standard profile. A space to be seen, to connect, and to grow your craft.",
     'features.f1.title':'Showcase your work','features.f1.desc':'A portfolio built for creatives. Show reels, photo sets, stage credits, and everything else — displayed the way your work actually deserves.',
     'features.f2.title':'Find opportunities','features.f2.desc':'Job listings, casting calls, collaboration proposals — all posted by people who actually understand the creative industry.',
     'features.f3.title':'Connect and collaborate','features.f3.desc':'Message directly, propose projects, build your network. Real creative relationships — not just follower counts.',
@@ -391,7 +397,7 @@ const T = {
     'features.f5.title':'Chat and offers','features.f5.desc':'A messaging system built for creative negotiations — propose, counter, agree. Everything in one place.',
     'features.f6.title':'Open to the public','features.f6.desc':'Visual artists and photographers get public-facing profiles — discoverable by anyone, not just members.',
     'who.eyebrow':"Who it's for",'who.title':'Two worlds, one platform',
-    'who.sub':"Whether you're in front of the camera, behind it, or wielding a brush — Creators was built with your specific needs in mind.",
+    'who.sub':"Whether you're in front of the camera, behind it, or wielding a brush — Creator was built with your specific needs in mind.",
     'who.s1.badge':'Film & Theatre','who.s1.title':'The storytellers',
     'who.s1.desc':"A fully private professional network for film and theatre creatives. Connect with people who speak your language — from stage directions to shooting ratios.",
     'who.s1.t1':'Actors','who.s1.t2':'Directors','who.s1.t3':'Cinematographers','who.s1.t4':'Screenwriters',
@@ -408,7 +414,7 @@ const T = {
     'how.s2.title':'Discover your community','how.s2.desc':'Browse job listings, find open collaborations, or simply explore other creatives in your field. The right people are already here — go find them.',
     'how.s3.title':'Create together','how.s3.desc':'Reach out, make offers, use the built-in tools for your craft. Great projects begin with a single message. This is where yours starts.',
     'pricing.eyebrow':'Pricing','pricing.title':'Start free, grow with us',
-    'pricing.sub':"Joining Creators is completely free. As we grow, premium tools will be available as a subscription or pay-per-use — you'll always control what you pay for.",
+    'pricing.sub':"Joining Creator is completely free. As we grow, premium tools will be available as a subscription or pay-per-use — you'll always control what you pay for.",
     'pricing.badge':'Available now','pricing.free.name':'Free','pricing.free.period':'/ forever',
     'pricing.free.desc':'Everything you need to build your creative presence and start connecting.',
     'pricing.free.f1':'Full profile & portfolio','pricing.free.f2':'Job listings & collaborations',
@@ -419,46 +425,46 @@ const T = {
     'pricing.pro.f3':'Priority visibility','pricing.pro.f4':'Subscription or pay-per-use','pricing.pro.f5':'More tools coming',
     'pricing.pro.cta':'Coming soon',
     'cta.eyebrow':'Get started','cta.title':'Your creative career<br>starts here',
-    'cta.sub':"Hundreds of creatives are already building their network on Creators. Be part of it from day one — it's free, always.",
+    'cta.sub':"Hundreds of creatives are already building their network on Creator. Be part of it from day one — it's free, always.",
     'cta.btn1':'Create your free profile','cta.btn2':'Learn more',
     'footer.terms':'Terms of Service','footer.privacy':'Privacy Policy','footer.cookies':'Cookie Policy',
-    'footer.contact':'Contact','footer.about':'About','footer.copy':'© 2025 Creators. Built for the creative world.',
+    'footer.contact':'Contact','footer.about':'About','footer.copy':'© 2025 Creator. Built for the creative world.',
   },
   el: {
     'nav.features':'Χαρακτηριστικά','nav.who':'Για ποιους','nav.pricing':'Τιμές',
     'nav.openApp':'Άνοιγμα εφαρμογής ↗','nav.join':'Εγγραφή δωρεάν',
     'hero.tag':'Τώρα ανοιχτό για πρώιμη πρόσβαση',
     'hero.h1':'Εκεί που οι <em>δημιουργοί</em><br>βρίσκουν τους δικούς τους',
-    'hero.p':'Ένα επαγγελματικό δίκτυο φτιαγμένο αποκλειστικά για τον κόσμο της τέχνης — κινηματογράφος, θέατρο, φωτογραφία και πολλά άλλα.',
+    'hero.p':'Ένα επαγγελματικό δίκτυο φτιαγμένο αποκλειστικά για τους ανθρώπους που δημιουργούν τέχνη — κινηματογράφος, θέατρο, φωτογραφία και πολλά άλλα.',
     'hero.btnApp':'Άνοιγμα εφαρμογής ↗','hero.btnJoin':'Δημιούργησε το προφίλ σου','hero.btnExplore':'Εξερεύνησε τις δυνατότητες',
     'hero.pill2':'Φωτογραφία','hero.pill3':'Εικαστικές Τέχνες','hero.pill4':'Σκηνοθεσία','hero.pill5':'Συγγραφή',
     'features.eyebrow':'Η πλατφόρμα','features.title':'Όχι απλώς ένα ακόμη κοινωνικό δίκτυο',
-    'features.sub':'Το Creators σχεδιάστηκε από μηδενική βάση για επαγγελματίες της τέχνης — ανθρώπους των οποίων η δουλειά δεν χωράει σε ένα τυπικό προφίλ. Ένας χώρος για να φαίνεσαι, να συνδέεσαι και να εξελίσσεσαι.',
+    'features.sub':'Το Creator σχεδιάστηκε από μηδενική βάση για επαγγελματίες της τέχνης — ανθρώπους των οποίων η δουλειά δεν χωράει σε ένα τυπικό προφίλ. Ένας χώρος για να φαίνεσαι, να συνδέεσαι και να εξελίσσεσαι.',
     'features.f1.title':'Ανάδειξε τη δουλειά σου','features.f1.desc':'Ένα portfolio φτιαγμένο για δημιουργούς. Showreel, φωτογραφίες, θεατρικές συμμετοχές και ό,τι άλλο — παρουσιασμένο όπως πραγματικά αξίζει.',
     'features.f2.title':'Βρες ευκαιρίες','features.f2.desc':'Αγγελίες εργασίας, casting, προτάσεις συνεργασίας — όλα από ανθρώπους που καταλαβαίνουν πραγματικά τον χώρο.',
-    'features.f3.title':'Συνδέσου και συνεργάσου','features.f3.desc':'Στείλε μήνυμα, πρότεινε projects, χτίσε το δίκτυό σου. Πραγματικές δημιουργικές σχέσεις — όχι απλώς followers.',
+    'features.f3.title':'Συνδέσου και συνεργάσου','features.f3.desc':'Στείλε μήνυμα, πρότεινε συνεργασίες, χτίσε το δίκτυό σου. Πραγματικές δημιουργικές σχέσεις — όχι απλώς followers.',
     'features.f4.title':'Εργαλείο πρόβας κειμένου','features.f4.desc':'Οι ηθοποιοί μπορούν να κάνουν πρόβα με έναν AI συμπαίκτη — ανέβασε το σενάριο, επέλεξε τον ρόλο σου και εξάσκησου σε πραγματικό χρόνο με φωνητική υποστήριξη.',
     'features.f5.title':'Chat και προσφορές','features.f5.desc':'Ένα σύστημα μηνυμάτων φτιαγμένο για δημιουργικές διαπραγματεύσεις — πρότεινε, αντιπρότεινε, συμφώνησε. Όλα σε ένα μέρος.',
-    'features.f6.title':'Ανοιχτό στο κοινό','features.f6.desc':'Εικαστικοί και φωτογράφοι έχουν δημόσιο προφίλ — ανακαλύψιμο από όλους, όχι μόνο από μέλη.',
+    'features.f6.title':'Ανοιχτό στο κοινό','features.f6.desc':'Φωτογράφοι, DJ, Tattoo Artists, Ανιματέρ, Πιλότοι Drone και άλλοι, έχουν δημόσιο προφίλ — ανακαλύψιμο και από ιδιώτες.',
     'who.eyebrow':'Για ποιους','who.title':'Δύο κόσμοι, μία πλατφόρμα',
-    'who.sub':'Είτε βρίσκεσαι μπροστά από την κάμερα, πίσω από αυτήν, ή κρατάς ένα πινέλο — το Creators φτιάχτηκε με τις δικές σου ανάγκες στο μυαλό.',
+    'who.sub':'Είτε βρίσκεσαι μπροστά από την κάμερα, πίσω από αυτήν, κρατάς μια φωτογραφική, ένα βινύλιο,ένα πινέλο — το Creator φτιάχτηκε με τις δικές σου ανάγκες στο μυαλό.',
     'who.s1.badge':'Κινηματογράφος & Θέατρο','who.s1.title':'Οι αφηγητές',
     'who.s1.desc':'Ένα πλήρως ιδιωτικό επαγγελματικό δίκτυο για επαγγελματίες του κινηματογράφου και του θεάτρου. Συνδέσου με ανθρώπους που μιλούν τη γλώσσα σου.',
     'who.s1.t1':'Ηθοποιοί','who.s1.t2':'Σκηνοθέτες','who.s1.t3':'Κινηματογραφιστές','who.s1.t4':'Σεναριογράφοι',
     'who.s1.t5':'Θεατρικοί συγγραφείς','who.s1.t6':'Παραγωγοί','who.s1.t7':'Σκηνογράφοι','who.s1.t8':'Συνεργεία & παραγωγή',
-    'who.s2.badge':'Εικαστικές & Άλλες Τέχνες','who.s2.title':'Οι οραματιστές',
-    'who.s2.desc':'Δημόσια προφίλ που αφήνουν τον κόσμο να ανακαλύψει τη δουλειά σου. Φτάσε σε κοινό έξω από την καλλιτεχνική κοινότητα και γίνε ορατός.',
-    'who.s2.t1':'Φωτογράφοι','who.s2.t2':'Εικαστικοί','who.s2.t3':'Εικονογράφοι','who.s2.t4':'Γραφίστες',
-    'who.s2.t5':'Μουσικοί','who.s2.t6':'Συνθέτες','who.s2.t7':'Ψηφιακοί καλλιτέχνες','who.s2.t8':'Και άλλοι...',
+    'who.s2.badge':'Άλλες Τέχνες','who.s2.title':'Οι οραματιστές',
+    'who.s2.desc':'Προφίλ ανακαλύψιμο και σε ιδιώτες. Φτάσε σε κοινό έξω από την καλλιτεχνική κοινότητα και γίνε ορατός.',
+    'who.s2.t1':'Φωτογράφοι','who.s2.t2':'DJ','who.s2.t3':'Tattoo Artists','who.s2.t4':'Ανιματέρ',
+    'who.s2.t5':'Πιλότοι Drone','who.s2.t6':'Graphic Designer','who.s2.t7':'Ζωγράφοι','who.s2.t8':'Και άλλοι...',
     'who.s3.badge':'Το κοινό','who.s3.title':'Το κοινό',
-    'who.s3.desc':'Δεν είσαι επαγγελματίας καλλιτέχνης; Είσαι κι εσύ ευπρόσδεκτος. Ανακάλυψε portfolios, νέους καλλιτέχνες, ακολούθησε projects.',
-    'who.s3.t1':'Φίλοι της τέχνης','who.s3.t2':'Talent scouts','who.s3.t3':'Διοργανωτές','who.s3.t4':'Brands & πελάτες','who.s3.t5':'Όποιος θέλει',
+    'who.s3.desc':'Δεν είσαι επαγγελματίας καλλιτέχνης; Είσαι κι εσύ ευπρόσδεκτος. Ανακάλυψε Creators για κάθε σου ανάγκη.Σύγκρινε επαγγελματίες με ένα κλίκ, ανά είδος και κατηγορία και κλείσε τον δικό σου!',
+    'who.s3.t1':'Φίλοι της τέχνης','who.s3.t2':'Ετοιμάζεις τον γάμο σου ','who.s3.t3':'Ανιματέρ για το Πάρτυ του παιδιού σου','who.s3.t4':'DJ για το πάρτυ γενεθλίων σου','who.s3.t5':'Wedding Planners',
     'how.eyebrow':'Πώς λειτουργεί','how.title':'Έτοιμος σε λίγα λεπτά',
-    'how.s1.title':'Δημιούργησε το προφίλ σου','how.s1.desc':'Εγγράψου δωρεάν και χτίσε ένα προφίλ που αποδίδει δικαιοσύνη στη δουλειά σου. Ανέβασε το portfolio, τους τίτλους σου και τη διαθεσιμότητά σου.',
+    'how.s1.title':'Δημιούργησε το προφίλ σου','how.s1.desc':'Εγγράψου δωρεάν και χτίσε ένα προφίλ που αποδίδει δικαιοσύνη στη δουλειά σου. Ανέβασε το portfolio, τους τίτλους σου,συνδέσου με συνεργάτες, τρέχοντες και μελλοντικούς.',
     'how.s2.title':'Ανακάλυψε την κοινότητά σου','how.s2.desc':'Δες αγγελίες, βρες ανοιχτές συνεργασίες, εξερεύνησε άλλους δημιουργούς στον χώρο σου. Οι κατάλληλοι άνθρωποι είναι ήδη εδώ.',
     'how.s3.title':'Δημιουργήστε μαζί','how.s3.desc':'Επικοινώνησε, κάνε προτάσεις, χρησιμοποίησε τα εργαλεία της πλατφόρμας. Τα μεγάλα projects ξεκινούν από ένα μήνυμα. Αυτό είναι το μέρος.',
     'pricing.eyebrow':'Τιμές','pricing.title':'Ξεκίνα δωρεάν, μεγάλωσε μαζί μας',
-    'pricing.sub':'Η εγγραφή στο Creators είναι εντελώς δωρεάν. Καθώς μεγαλώνουμε, premium εργαλεία θα είναι διαθέσιμα με συνδρομή ή χρέωση ανά χρήση — εσύ αποφασίζεις τι πληρώνεις.',
+    'pricing.sub':'Η εγγραφή στο Creator είναι εντελώς δωρεάν. Καθώς μεγαλώνουμε, premium εργαλεία θα είναι διαθέσιμα με συνδρομή ή χρέωση ανά χρήση — εσύ αποφασίζεις τι πληρώνεις.',
     'pricing.badge':'Διαθέσιμο τώρα','pricing.free.name':'Δωρεάν','pricing.free.period':'/ για πάντα',
     'pricing.free.desc':'Όλα όσα χρειάζεσαι για να χτίσεις την παρουσία σου και να ξεκινήσεις να συνδέεσαι.',
     'pricing.free.f1':'Πλήρες προφίλ & portfolio','pricing.free.f2':'Αγγελίες & συνεργασίες',
@@ -469,18 +475,18 @@ const T = {
     'pricing.pro.f3':'Προτεραιότητα στην εμφάνιση','pricing.pro.f4':'Συνδρομή ή χρέωση ανά χρήση','pricing.pro.f5':'Περισσότερα εργαλεία έρχονται',
     'pricing.pro.cta':'Σύντομα',
     'cta.eyebrow':'Ξεκίνα','cta.title':'Η καλλιτεχνική σου καριέρα<br>ξεκινά εδώ',
-    'cta.sub':'Εκατοντάδες δημιουργοί χτίζουν ήδη το δίκτυό τους στο Creators. Γίνε μέρος του από την πρώτη μέρα — δωρεάν, πάντα.',
+    'cta.sub':'Εκατοντάδες δημιουργοί χτίζουν ήδη το δίκτυό τους στο Creator. Γίνε μέρος του από την πρώτη μέρα — δωρεάν, πάντα.',
     'cta.btn1':'Δημιούργησε το προφίλ σου','cta.btn2':'Μάθε περισσότερα',
     'footer.terms':'Όροι Χρήσης','footer.privacy':'Πολιτική Απορρήτου','footer.cookies':'Πολιτική Cookies',
-    'footer.contact':'Επικοινωνία','footer.about':'Σχετικά','footer.copy':'© 2025 Creators. Φτιαγμένο για τον κόσμο της τέχνης.',
+    'footer.contact':'Επικοινωνία','footer.about':'Σχετικά','footer.copy':'© 2025 Creator. Φτιαγμένο για τον κόσμο της τέχνης.',
   }
 };
 
-let lang = localStorage.getItem('creators_lang') || 'el';
+let lang = localStorage.getItem('Creator_lang') || 'el';
 
 function setLang(l) {
   lang = l;
-  localStorage.setItem('creators_lang', l);
+  localStorage.setItem('Creator_lang', l);
   applyLang();
 }
 
@@ -505,8 +511,8 @@ function applyLang() {
       if (v !== undefined) el.innerHTML = v;
     });
     document.title = lang === 'el'
-      ? 'Creators — Εκεί που οι δημιουργοί βρίσκουν τους δικούς τους'
-      : 'Creators — Where Creative People Find Their People';
+      ? 'Creator — Εκεί που οι δημιουργοί βρίσκουν τους δικούς τους'
+      : 'Creator — Where Creative People Find Their People';
     document.querySelectorAll('.lang-fade').forEach(el => el.style.opacity = '1');
   }, 180);
 }
@@ -546,5 +552,6 @@ ScrollTrigger.create({
   }
 });
 </script>
+
 </body>
 </html>
