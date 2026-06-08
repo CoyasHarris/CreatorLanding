@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Creator — Εκεί που οι δημιουργοί βρίσκουν τους δικούς τους</title>
+<title>Creator — Εδώ που οι δημιουργοί βρίσκουν τους δικούς τους</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&family=LXGW+WenKai+TC&display=swap" rel="stylesheet">
 <!-- font candidates (uncomment to test):
@@ -123,6 +123,10 @@
                     #181818
             );
   }
+  .cast-demo { background: var(--bg3); border: 1px solid var(--border); border-radius: 14px; padding: 20px; user-select: none; }
+  .cast-listing-header { background: var(--bg); border: 1px solid var(--accent-border); border-radius: 10px; padding: 12px 14px; margin-bottom: 14px; }
+  .cast-listing-label { display: block; font-size: 13px; color: var(--text); font-weight: 600; margin-bottom: 3px; }
+  .cast-listing-meta { display: block; font-size: 11px; color: var(--muted); }
   .feature-card.spotlight::before { transform: scaleX(1); opacity: .6; }
   .feature-card.spotlight:hover { transform: translateY(-2px); border-color: #ff970077; }
   .spotlight-badge { display: inline-flex; align-items: center; gap: 6px; background: var(--accent-dim); border: 1px solid var(--accent-border); border-radius: 50px; padding: 4px 14px; font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 20px; }
@@ -351,6 +355,42 @@
       </div>
     </div>
 
+    <!-- SPOTLIGHT: Casting director -->
+    <div class="feature-card spotlight">
+      <div class="spotlight-badge" data-i18n="features.cast.badge"></div>
+      <div class="spotlight-badge" data-i18n="features.cast.badge2"></div>
+      <div class="spotlight-body">
+        <div class="spotlight-text">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M7 8h.01M12 8h.01M7 11h10"/></svg></div>
+          <h3 data-i18n="features.cast.title"></h3>
+          <p data-i18n="features.cast.desc"></p>
+        </div>
+        <div class="spotlight-visual cast-demo">
+          <div class="cast-listing-header">
+            <span class="cast-listing-label" data-i18n="features.cast.listing"></span>
+            <span class="cast-listing-meta" data-i18n="features.cast.budget"></span>
+          </div>
+          <div class="demo-filters">
+            <span class="demo-pill" data-i18n="features.cast.responses"></span>
+            <span class="demo-pill" data-i18n="features.cast.comparing"></span>
+          </div>
+          <div class="demo-cards">
+            <div class="demo-card">
+              <div class="d-avatar">NK</div>
+              <div class="d-name">Νίκη Κ.</div>
+              <div class="d-tag" data-i18n="features.cast.actor1"></div>
+            </div>
+            <div class="demo-card">
+              <div class="d-avatar">ΑΛ</div>
+              <div class="d-name">Αλεξία Λ.</div>
+              <div class="d-tag" data-i18n="features.cast.actor2"></div>
+            </div>
+          </div>
+          <div class="demo-next" data-i18n="features.cast.choose"></div>
+        </div>
+      </div>
+    </div>
+
     <!-- SPOTLIGHT: Script rehearsal -->
     <div class="feature-card spotlight">
       <div class="spotlight-badge" data-i18n="features.f4.badge"></div>
@@ -548,32 +588,43 @@ const T = {
     'features.eyebrow':'The platform','features.title':'Not just another social network',
     'features.sub':"Creator is designed from the ground up for creative professionals — people whose work doesn't fit into a standard profile. A space to be seen, to connect, and to grow your craft.",
     'features.f1.title':'Showcase your work','features.f1.desc':'A portfolio built for creatives. Show reels, photo sets, stage credits, and everything else — displayed the way your work actually deserves.',
-    'features.f2.title':'Find opportunities','features.f2.desc':'Job listings, casting calls, collaboration proposals — all posted by people who actually understand the creative industry.',
+    'features.f2.title':'Post or find listings','features.f2.desc':'Job listings, casting calls, or personal requests — anyone can post. Need a DJ for a specific weekend? Set your budget and let creators apply.',
     'features.f3.title':'Connect and collaborate','features.f3.desc':'Message directly, propose projects, build your network. Real creative relationships — not just follower counts.',
-    'features.f7.badge':'⚡ Signature feature','features.f7.title':'Browse & compare, one tap at a time','features.f7.desc':'Filter by type and style — photographer + wedding, tattoo artist + Japanese — then just hit Next. Discover creators one by one, at your own pace. No endless scrolling, no noise.',
+    'features.f7.badge':'⚡ Signature feature','features.f7.title':'Post. Compare. Choose.','features.f7.desc':'Casting directors: post a listing, collect applications, and review every response side by side. Everyone else: filter by type and style and hit Next to discover creators one at a time. No spreadsheets, no noise.',
     'features.f7.pill1':'📸 Photographer','features.f7.pill2':'💍 Wedding','features.f7.next':'Next →',
+    'features.cast.badge':'🎬 For casting directors',
+    'features.cast.badge2':'🎬 For public',
+    'features.cast.title':'Post a listing. Collect responses. Compare and choose.',
+    'features.cast.desc':"Upload a casting call or job listing in seconds. As applications come in, review every candidate side by side — filtered by role, skill, or availability. No spreadsheets, no inbox chaos.",
+    'features.cast.listing':'Lead role — female, 25–35',
+    'features.cast.budget':'Budget: €800 · 3-day shoot',
+    'features.cast.responses':'12 responses',
+    'features.cast.comparing':'Comparing 2',
+    'features.cast.actor1':'Actress · 28',
+    'features.cast.actor2':'Actress · 31',
+    'features.cast.choose':'Choose →',
     'features.f4.badge':'⚡ Signature feature','features.f4.title':'Script rehearsal tool','features.f4.desc':'Upload your script and the app instantly parses every character. Pick your role, and an AI takes all the others. When you go blank, it whispers the next 2–3 words — the scene only moves forward once you say them correctly out loud.',
     'features.f4.step1':'Upload','features.f4.step2':'Characters parsed','features.f4.step3':'Role selected',
     'features.f4.char1':'★ HAMLET','features.f4.char2':'HORATIO','features.f4.char3':'CLAUDIUS',
     'features.f4.demo1':'"You have to do it. Now, before it\'s too late."','features.f4.demoyou':'You','features.f4.demo2':'"I can\'t. Not like this."','features.f4.demo3':'"Then when? Tomorrow there\'s no stage left."',
     'features.f4.whisper':'whispering next words...',
     'features.f5.title':'Chat and offers','features.f5.desc':'A messaging system built for creative negotiations — propose, counter, agree. Everything in one place.',
-    'features.f6.title':'Open to the public','features.f6.desc':'Visual artists and photographers get public-facing profiles — discoverable by anyone, not just members.',
+    'features.f6.title':'Open to the public','features.f6.desc':'Photographers, DJs, Tattoo Artists, Animators, Drone Pilots and more get public-facing profiles — discoverable by anyone, not just members.',
     'who.eyebrow':"Who it's for",'who.title':'Two worlds, one platform',
-    'who.sub':"Whether you're in front of the camera, behind it, or wielding a brush — Creator was built with your specific needs in mind.",
+    'who.sub':"Whether you're in front of the camera, behind it, holding a lens, a vinyl, or a brush — Creator was built with your specific needs in mind.",
     'who.s1.badge':'Film & Theatre','who.s1.title':'The storytellers',
-    'who.s1.desc':"A fully private professional network for film and theatre creatives. Connect with people who speak your language — from stage directions to shooting ratios.",
+    'who.s1.desc':"A fully private professional network for film and theatre creatives. Casting directors can post listings and review all applications side by side — then connect with the right person in a single message.",
     'who.s1.t1':'Actors','who.s1.t2':'Directors','who.s1.t3':'Cinematographers','who.s1.t4':'Screenwriters',
     'who.s1.t5':'Playwrights','who.s1.t6':'Producers','who.s1.t7':'Stage designers','who.s1.t8':'Crew & production',
-    'who.s2.badge':'Visual & Other Arts','who.s2.title':'The visionaries',
-    'who.s2.desc':'Public-facing profiles that let the world discover your work. Reach an audience beyond the creative community and get found by the people looking for exactly what you do.',
-    'who.s2.t1':'Photographers','who.s2.t2':'Visual artists','who.s2.t3':'Illustrators','who.s2.t4':'Graphic designers',
-    'who.s2.t5':'Musicians','who.s2.t6':'Composers','who.s2.t7':'Digital artists','who.s2.t8':'And more...',
+    'who.s2.badge':'Other Arts','who.s2.title':'The visionaries',
+    'who.s2.desc':'Public-facing profiles discoverable by anyone — not just members. Reach an audience beyond the creative community and get found by the people looking for exactly what you do.',
+    'who.s2.t1':'Photographers','who.s2.t2':'DJs','who.s2.t3':'Tattoo Artists','who.s2.t4':'Animators',
+    'who.s2.t5':'Drone Pilots','who.s2.t6':'Graphic Designers','who.s2.t7':'Painters','who.s2.t8':'And more...',
     'who.s3.badge':'The public','who.s3.title':'The audience',
-    'who.s3.desc':"Not a creative professional? You're still welcome. Browse portfolios, discover new artists, follow projects, and connect with the creative world around you.",
-    'who.s3.t1':'Art lovers','who.s3.t2':'Talent scouts','who.s3.t3':'Event organisers','who.s3.t4':'Brands & clients','who.s3.t5':'Anyone curious','who.s3.t6':'You want offer for your next Tattoo',
+    'who.s3.desc':"Not a creative professional? You're still welcome. Discover creators for your every need and compare them side by side — or post your own listing with a budget and timeline, and let the right creator come to you.",
+    'who.s3.t1':'Photographer for your wedding','who.s3.t2':"Animator for your kid's party",'who.s3.t3':'DJ for your birthday party','who.s3.t4':'Wedding Planners','who.s3.t5':'Offer for your next Tattoo','who.s3.t6':'Art lovers',
     'how.eyebrow':'How it works','how.title':'Up and running in minutes',
-    'how.s1.title':'Create your profile','how.s1.desc':'Sign up for free and build a profile that actually does justice to your creative work. Upload your portfolio, list your credits, set your availability and specialties.',
+    'how.s1.title':'Create your profile','how.s1.desc':'Sign up for free and build a profile that actually does justice to your creative work. Upload your portfolio, list your credits, connect with current and future collaborators.',
     'how.s2.title':'Discover your community','how.s2.desc':'Browse job listings, find open collaborations, or simply explore other creatives in your field. The right people are already here — go find them.',
     'how.s3.title':'Create together','how.s3.desc':'Reach out, make offers, use the built-in tools for your craft. Great projects begin with a single message. This is where yours starts.',
     'pricing.eyebrow':'Pricing','pricing.title':'Start free, grow with us',
@@ -597,17 +648,28 @@ const T = {
     'nav.features':'Χαρακτηριστικά','nav.who':'Για ποιους','nav.pricing':'Τιμές',
     'nav.openApp':'Άνοιγμα εφαρμογής ↗','nav.join':'Εγγραφή δωρεάν',
     'hero.tag':'Τώρα ανοιχτό για πρώιμη πρόσβαση',
-    'hero.h1':'Εκεί που οι <em>δημιουργοί</em><br>βρίσκουν τους δικούς τους',
+    'hero.h1':'Εδώ που οι <em>δημιουργοί</em><br>βρίσκουν τους δικούς τους',
     'hero.p':'Ένα επαγγελματικό δίκτυο φτιαγμένο αποκλειστικά για τους ανθρώπους που δημιουργούν τέχνη — κινηματογράφος, θέατρο, φωτογραφία και πολλά άλλα.',
     'hero.btnApp':'Άνοιγμα εφαρμογής ↗','hero.btnJoin':'Δημιούργησε το προφίλ σου','hero.btnExplore':'Εξερεύνησε τις δυνατότητες',
     'hero.pill2':'Φωτογραφία','hero.pill3':'Εικαστικές Τέχνες','hero.pill4':'Σκηνοθεσία','hero.pill5':'Συγγραφή',
     'features.eyebrow':'Η πλατφόρμα','features.title':'Όχι απλώς ένα ακόμη κοινωνικό δίκτυο',
     'features.sub':'Το Creator σχεδιάστηκε από μηδενική βάση για επαγγελματίες της τέχνης — ανθρώπους των οποίων η δουλειά δεν χωράει σε ένα τυπικό προφίλ. Ένας χώρος για να φαίνεσαι, να συνδέεσαι και να εξελίσσεσαι.',
     'features.f1.title':'Ανάδειξε τη δουλειά σου','features.f1.desc':'Ένα portfolio φτιαγμένο για δημιουργούς. Showreel, φωτογραφίες, θεατρικές συμμετοχές και ό,τι άλλο — παρουσιασμένο όπως πραγματικά αξίζει.',
-    'features.f2.title':'Βρες ευκαιρίες','features.f2.desc':'Αγγελίες εργασίας, casting, προτάσεις συνεργασίας — όλα από ανθρώπους που καταλαβαίνουν πραγματικά τον χώρο.',
+    'features.f2.title':'Βρες ευκαιρίες','features.f2.desc':'Αγγελίες εργασίας, casting, προτάσεις συνεργασίας — όλα από ανθρώπους που καταλαβαίνουν πραγματικά τον χώρο.O καθένας μπορεί να δημοσιεύσει. Χρειάζεσαι DJ για ένα Σαββατοκύριακο; Όρισε τον προϋπολογισμό σου και άσε τους δημιουργούς να κάνουν αίτηση',
     'features.f3.title':'Συνδέσου και συνεργάσου','features.f3.desc':'Στείλε μήνυμα, πρότεινε συνεργασίες, χτίσε το δίκτυό σου. Πραγματικές δημιουργικές σχέσεις — όχι απλώς followers.',
-    'features.f7.badge':'⚡ Signature feature','features.f7.title':'Ανακάλυψε & σύγκρινε, ένα tap τη φορά','features.f7.desc':'Φίλτρα κατά τύπο και στυλ — φωτογράφος + γάμος, tattoo artist + Japanese — και πάτα Επόμενο. Ανακάλυψε δημιουργούς έναν-έναν, χωρίς ατελείωτο scrolling.',
+    'features.f7.badge':'⚡ Signature feature','features.f7.title':'Ανακάλυψε & σύγκρινε, ένα tap τη φορά','features.f7.desc':'Φίλτρα κατά τύπο και στυλ — φωτογράφος + γάμος, tattoo artist + Japanese — και πάτα Επόμενο. Ανακάλυψε δημιουργούς έναν-έναν, χωρίς ατελείωτο scrolling.Επίλεξε τον αγαπημένο σου και κάνε του την πρότασή σου.',
     'features.f7.pill1':'📸 Φωτογράφος','features.f7.pill2':'💍 Γάμος','features.f7.next':'Επόμενο →',
+    'features.cast.badge':'🎬 Για casting directors',
+    'features.cast.badge2':'🎬 Για κοινό',
+    'features.cast.title':'Δημοσίευσε. Λάβε αιτήσεις. Σύγκρινε και επίλεξε.',
+    'features.cast.desc':'Ανέβασε ένα casting ή αγγελία εργασίας σε δευτερόλεπτα. Καθώς έρχονται οι αιτήσεις, δες κάθε υποψήφιο δίπλα-δίπλα — ανά ζητούμενο.',
+    'features.cast.listing':'Πρωταγωνιστικός ρόλος — γυναίκα, 25–35',
+    'features.cast.budget':'Αμοιβή: €800 · 3 ημέρες γυρίσματα',
+    'features.cast.responses':'12 αιτήσεις',
+    'features.cast.comparing':'Σύγκριση 2',
+    'features.cast.actor1':'Ηθοποιός · 28',
+    'features.cast.actor2':'Ηθοποιός · 31',
+    'features.cast.choose':'Επίλεξε →',
     'features.f4.badge':'⚡ Signature feature','features.f4.title':'Εργαλείο πρόβας κειμένου','features.f4.desc':'Ανέβασε το σενάριο και η εφαρμογή αναλύει αμέσως όλους τους χαρακτήρες. Επέλεξε τον ρόλο σου και η εφαρμογή αναλαμβάνει τους υπόλοιπους. Όταν χαθείς, σου ψιθυρίζει τις επόμενες 2–3 λέξεις — η σκηνή προχωρά μόνο αν τις πεις σωστά.',
     'features.f4.step1':'Ανέβασμα','features.f4.step2':'Χαρακτήρες','features.f4.step3':'Ρόλος επιλέχθηκε',
     'features.f4.char1':'★ ΑΜΛΕΤ','features.f4.char2':'ΟΡΆΤΙΟΣ','features.f4.char3':'ΚΛΑΥΔΙΟΣ',
@@ -616,7 +678,7 @@ const T = {
     'features.f5.title':'Chat και προσφορές','features.f5.desc':'Ένα σύστημα μηνυμάτων φτιαγμένο για δημιουργικές διαπραγματεύσεις — πρότεινε, αντιπρότεινε, συμφώνησε. Όλα σε ένα μέρος.',
     'features.f6.title':'Ανοιχτό στο κοινό','features.f6.desc':'Φωτογράφοι, DJ, Tattoo Artists, Ανιματέρ, Πιλότοι Drone και άλλοι, έχουν δημόσιο προφίλ — ανακαλύψιμο και από ιδιώτες.',
     'who.eyebrow':'Για ποιους','who.title':'Δύο κόσμοι, μία πλατφόρμα',
-    'who.sub':'Είτε βρίσκεσαι μπροστά από την κάμερα, πίσω από αυτήν, κρατάς μια φωτογραφική, ένα βινύλιο,ένα πινέλο — το Creator φτιάχτηκε με τις δικές σου ανάγκες στο μυαλό.',
+    'who.sub':'Είτε βρίσκεσαι μπροστά από την κάμερα, πίσω από αυτήν, κρατάς μια φωτογραφική, έναν μείκτη, μία βελόνα, ένα πινέλο — το Creator φτιάχτηκε με τις δικές σου ανάγκες στο μυαλό.',
     'who.s1.badge':'Κινηματογράφος & Θέατρο','who.s1.title':'Οι αφηγητές',
     'who.s1.desc':'Ένα πλήρως ιδιωτικό επαγγελματικό δίκτυο για επαγγελματίες του κινηματογράφου και του θεάτρου. Συνδέσου με ανθρώπους που μιλούν τη γλώσσα σου.',
     'who.s1.t1':'Ηθοποιοί','who.s1.t2':'Σκηνοθέτες','who.s1.t3':'Κινηματογραφιστές','who.s1.t4':'Σεναριογράφοι',
@@ -680,7 +742,7 @@ function applyLang() {
       if (v !== undefined) el.innerHTML = v;
     });
     document.title = lang === 'el'
-      ? 'Creator — Εκεί που οι δημιουργοί βρίσκουν τους δικούς τους'
+      ? 'Creator — Εδώ που οι δημιουργοί βρίσκουν τους δικούς τους'
       : 'Creator — Where Creative People Find Their People';
     document.querySelectorAll('.lang-fade').forEach(el => el.style.opacity = '1');
   }, 180);
